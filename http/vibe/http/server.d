@@ -1440,6 +1440,7 @@ final class HTTPServerResponse : HTTPResponse {
 			m_bodyWriter = m_chunkedBodyWriter;
 		}
 
+		/* 
 		if (auto pce = "Content-Encoding" in headers) {
 			if (icmp2(*pce, "gzip") == 0) {
 				m_zlibOutputStream = createGzipOutputStreamFL(m_bodyWriter);
@@ -1450,7 +1451,7 @@ final class HTTPServerResponse : HTTPResponse {
 			} else {
 				logWarn("Unsupported Content-Encoding set in response: '"~*pce~"'");
 			}
-		}
+		}*/
 
 		return m_bodyWriter;
 	}
